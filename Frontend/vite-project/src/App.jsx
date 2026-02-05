@@ -39,9 +39,11 @@ function App() {
   }
 
   function handleDeleteNote(noteId){
-    axios.delete("http://localhost:3000/notes"+noteId)
+    axios.delete("http://localhost:3000/notes/"+noteId)
     .then(res=>{
       console.log(res.data);
+
+      fetchNotes();
     })
   }
 
