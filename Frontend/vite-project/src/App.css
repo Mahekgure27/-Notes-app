@@ -1,28 +1,125 @@
-*{
+/* Reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: rgb(0, 0, 0); */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
-  height: fit-content;
-  width: fit-content;
-  flex-wrap: wrap;
-  background-color: beige;
-  border-radius: 20px;
-  margin: 15px;
+/* Page Background */
+body {
+  background-color: #f4f6f8;
+  min-height: 100vh;
 }
 
-h1{
+/* Form Styling */
+form {
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input Fields */
+form input {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+form input:focus {
+  border-color: #4f46e5;
+}
+
+/* Add Button */
+form button {
+  padding: 12px;
+  background-color: #4f46e5;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #3730a3;
+}
+
+/* Notes Grid */
+.dashboard {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Note Card */
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Note Title */
+.container h1 {
   font-size: 20px;
-  padding: 15px;
-  color: brown;
-  align-items: center;
+  margin-bottom: 10px;
+  color: #1f2933;
 }
 
-.container p{
+/* Note Description */
+.container p {
   font-size: 15px;
-  color: rgb(252, 139, 0);
-  padding: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Buttons Row */
+.actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Update Button */
+.update-btn {
+  flex: 1;
+  padding: 8px;
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  background-color: #16a34a;
+}
+
+/* Delete Button */
+.delete-btn {
+  flex: 1;
+  padding: 8px;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
 }
