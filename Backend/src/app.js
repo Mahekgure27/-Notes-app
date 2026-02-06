@@ -1,6 +1,7 @@
 const express = require("express")
 const noteModel = require("./models/notes.models")
 const cors = require("cors")
+const path = require("path")
 
 const app = express()
 app.use(cors())
@@ -51,6 +52,10 @@ app.delete("/notes/:id", async (req, res) => {
     message: "Note deleted successfully"
   });
 });
+
+app.use('*name',(req,res)=>{
+    res.sendFile(path.join(__dirname,"..","/public/index.html"));
+})
 
 
 module.exports = app
