@@ -10,7 +10,7 @@ function App() {
 
   function fetchNotes(){
     axios
-    .get("http://localhost:3000/notes")
+    .get("https://notes-app-4u9n.onrender")
     .then((res)=>{
     setNote(res.data.notes);
     })
@@ -27,7 +27,7 @@ function App() {
 
     console.log(title.value, description.value);
 
-    axios.post("http://localhost:3000/notes",{
+    axios.post("https://notes-app-4u9n.onrender",{
       title:title.value,
       description:description.value
     })
@@ -39,7 +39,7 @@ function App() {
   }
 
   function handleDeleteNote(noteId){
-    axios.delete("http://localhost:3000/notes/"+noteId)
+    axios.delete("https://notes-app-4u9n.onrender"+noteId)
     .then(res=>{
       console.log(res.data);
 
